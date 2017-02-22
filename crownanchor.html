@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Crown and Anchor</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="images/favicon.png">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+  <h1>Crown and Anchor</h1>
+  <div class="row">
+    <div class="col-sm-8">
+      
+      <div id="welcome" class="mainscr">
+        <h2>Welcome</h2>
+        <p>Crown and Anchor is a betting game originally played by Royal Navy midshipmen in the 18th century. A mat with six squares was laid out, with each square marked with a different symbol: Crown, Anchor, and the four standard card suits. (See photo on right.) Players would bet by placing money on one or more of the squares, one of the players would roll 3 dice whose faces matched the 6 symbols on the mat, and players who placed bets on squares which matched the rolled die faces won.</p>
+        <p>Similar versions of this game have appeared in other cultures, and the game is still played today in some casinos and gatherings like fairs and church fundraisers.</p>
+        <p>For this online version of the game, we will use the following rules:</p>
+        <ul>
+          <li>You will start with a Royal Navy midshipman's weekly pay of 100 pence for your kitty.</li>
+          <li>For each round, you can bet on one or more of the 6 squares, as long as your total bet for all the squares doesn't exceed your kitty.</li>
+          <li>You will click a Roll Dice button which will randomly generate results simulating rolling 3 six-sided dice.</li>
+          <li>If a die face matches one of the squares on which you placed your bet, you win your bet (you take your original bet plus an equal amount from the house). If 2 or 3 faces match a square on which you placed a bet, you win back your original bet plus 2 or 3 times that amount from the house.</li>
+          <li>You lose any bets you placed on squares which do not match rolled die faces.</li>
+          <li>Your net winnings or losses for the round increase or decrease your kitty for the next round.</li>
+          <li>You win the game if you make an additional 100 pence on top of what you started with.</li>
+          <li>You lose the game if your kitty reaches 0.</li>
+          <li>You can also quit the game at any time.</li>
+          </ul>
+        <div class="text-center"><button class="btn btn-success btn-lg" id="startbtn">Start Game</button></div>
+      </div>  <!-- end welcome -->
+      
+      <div id="placebets" class="mainscr">
+        <h2>Place your bets!</h2>
+        <p>Please fill in one or more amounts (or just leave "0") for what you want to bet for each of the die faces below. You can bet any positive integer amount on each of the faces as long as the total amount you bet does not exceed your kitty. Then click Roll Dice. You can also quit the game with what you have in your kitty now by clicking Walk Away<br />Note: Invalid values will be treated as a "0" bet for that face if you do not change them.</p>
+        
+        <!-- should dynamically generate the form from a js object -->
+ 
+      </div>   <!-- end placebets -->
+      
+      <div id="results" class="mainscr">
+        <h2>Dice roll for round <span></span>:</h2>
+        
+        <div class="btnrow text-center">
+        <button class="btn btn-primary btn-lg" id="playagain">Play Another Round</button>
+          <button class="btn btn-warning btn-lg" id="quitbtn2">Walk Away</button>
+          <button class="btn btn-success btn-lg" id="startbtn2">Play Again</button>
+        </div>
+      </div>  <!-- end results -->
+      
+      <div id="thanks" class="mainscr">
+        <h2>Thanks for playing!</h2>
+       <button class="btn btn-success btn-lg" id="startbtn3">Play Again</button>
+      
+        
+      </div>  <!-- end thanks -->
+      
+    </div>  <!-- end md-8 -->   
+    <div class="col-sm-4" id="resultstally">
+      
+    </div>
+      
+    </div>  <!-- end row -->
+</div>  <!-- end container -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

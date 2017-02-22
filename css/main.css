@@ -1,0 +1,61 @@
+.mainscr{
+  display: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+
+.facename {
+  margin-top: -20px;
+}
+.theglyph {
+  font-size: 7rem;
+  margin-bottom: 0;
+}
+
+.red {
+  color: #8B0000;
+}
+
+.gridsquare {
+  margin-top: 1rem;
+  
+  
+}
+
+.errormsg {
+  color: red;
+}
+
+button {
+  margin-right: 7rem;
+  margin-top: 1rem;
+}
+
+#betbtn, #quitbtn {
+  margin-top: 1rem;
+}
+
+#betbtn  {
+  margin-right: 7rem;
+}
+
+#amtsum, #diceyroll, h2.midsum + p {
+  font-size: 2.5rem;
+}
+
+h2.midsum {
+  margin-top: 4rem;
+}
+
+h2.midsum + p {
+  margin: 1rem 0 0 0;
+  text-align: center;
+}
+#startbtn {
+}
+
+
+
