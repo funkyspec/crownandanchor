@@ -153,13 +153,37 @@
             mainContent += '<div class="dieroll col-sm-4">Die ' + (i + 1) + ':<br /><span>' + dieRoll[i].unicodeHtmlDec + '</span><br />' + dieRoll[i].face + '</div>';
         }
         mainContent += '</div><h2 class="midsum">Results for round ' + rounds + ':</h2>';
-        mainContent += '<p class="midsum">You ' + ((net < 0) ? 'lost ' : 'won ') + Math.abs(net) + ' pence. Your new kitty: ' + kitty + ' pence.</p><p class="text-center midsum">(Details of this round\'s results below the buttons)</p>';
+        mainContent += '<p class="midsum">You ' + ((net < 0) ? 'lost ' : 'won ') + Math.abs(net) + ' pence. Your new kitty: ' + kitty + ' pence.</p><p class="midsum"><a href="#" class="showey" id="showrezzie">Show detailed results &raquo;</a></p>';
         
         /* <p>You ' + ((net < 0) ? 'lost ' : 'won ') + Math.abs(net) + ' pence. Your new kitty: ' + kitty + ' pence.</p>'; */
 
          $('#results h2:first-child').after(mainContent);
 
-        drawGrid('betresults', rollResult);
+         drawGrid('betresults', rollResult);
+
+        //listener for showing/hiding results
+        $('#showrezzie').on('click', function(e) {
+            e.preventDefault();
+            $this = $(this);
+            $('#griddy').toggle();
+            if ($this.hasClass('showey')) {
+                $this.html('Hide detailed results &laquo;');
+                $this.removeClass('showey');
+            } else {
+                $this.html('Show detailed results &raquo;');
+                $this.addClass('showey');
+            }         
+        });
+
+        $('#hiderezzie').on('click', function(e) {
+            e.preventDefault();
+            $this = $(this);
+            $('#griddy').toggle(false);
+
+            $this.html('Show detailed results &raquo;');
+            $this.attr('id', 'showrezzie');
+
+        });
         
        
 
@@ -355,7 +379,8 @@ function drawGrid (pagey, rolRes) {
      }  else if (pagey === 'betresults') {
          //put summary results here: total won or lost this round, new kitty
          newGridcont += '</div>';
-         $('#results .btnrow').after(newGridcont);
+         $('#results .btnrow').before(newGridcont);
+         $('#griddy').hide();
      }
 
 
